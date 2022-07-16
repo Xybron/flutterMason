@@ -1,1 +1,1 @@
-{"bricks":{"applicationLayer":{"path":"./application_layer"},"domainLayer":{"path":"./domain_layer"},"presentationLayer":{"path":"./presentation_layer"},"infraLayer":{"path":"./infrastructure_layer"}}}
+{"bricks":{"applicationLayer":{"path":"./application_layer"},"domainLayer":{"path":"./domain_layer"},"presentationLayer":{"path":"./presentation_layer"},"infraLayer":{"path":"./infrastructure_layer"},"starter":{"path":"./struct_init"}}}

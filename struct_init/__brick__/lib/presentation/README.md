@@ -1,0 +1,2 @@
+# PRESENTATION LAYER
+Everything about the UI of the app is developed here. No form of logic implementation should be done in this layer unless very necessary. Sends data downwards to application layer via events/triggers.

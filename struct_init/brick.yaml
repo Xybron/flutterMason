@@ -1,0 +1,17 @@
+name: starter
+description: A brick created to generate the needed files and folders for a simple DDD flutter project
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.26 <0.1.0"
+
+vars:
+  name:
+    type: string
+    description: App name
+    prompt: App name? (Must be same as name in current pubspec.yaml)
+  desc:
+    type: string  
+    description: The description of the app.
+    prompt: What's this app about?

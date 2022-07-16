@@ -7,5 +7,7 @@ bricks:
     path: './presentation_layer'
   infraLayer:
     path: './infrastructure_layer'
+  starter:
+    path: './struct_init'
 
     
