@@ -1,0 +1,18 @@
+name: infraLayer
+description: A brick created to generate the infrastructure layer of a flutter ddd project.
+
+# The following defines the version and build number for your brick.
+# A version number is three numbers separated by dots, like 1.2.34
+# followed by an optional build number (separated by a +).
+version: 0.1.0+1
+
+
+environment:
+  mason: ">=0.1.0-dev.26 <0.1.0"
+
+
+vars:
+  name:
+    type: string
+    description: Layer name
+    prompt: Application layer name
