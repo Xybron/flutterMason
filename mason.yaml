@@ -1,15 +1,13 @@
 bricks:
-  application : 
-    path: './application_layer'
+  application:
+    path: ./application_layer
   domain:
-    path: './domain_layer'
+    path: ./domain_layer
   presentation:
-    path: './presentation_layer'
+    path: ./presentation_layer
   infra:
-    path: './infrastructure_layer'
+    path: ./infrastructure_layer
   starter:
-    path: './struct_init'
+    path: ./struct_init
   feature_package:
-    path: './feature_package'
-
-    
+    path: ./feature_package
