@@ -1,5 +1,5 @@
-name: application
-description: A brick created to generate the application layer of a flutter ddd project.
+name: feature_package
+description: Generates a feature which makes up the application, domain, presentation and infrastructure layers.
 
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
@@ -14,5 +14,5 @@ environment:
 vars:
   name:
     type: string
-    description: Layer name
-    prompt: Application layer name
+    description: Feature name
+    prompt: Feature name?

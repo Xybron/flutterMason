@@ -1,1 +1,1 @@
-{"bricks":{"applicationLayer":{"path":"./application_layer"},"domainLayer":{"path":"./domain_layer"},"presentationLayer":{"path":"./presentation_layer"},"infraLayer":{"path":"./infrastructure_layer"},"starter":{"path":"./struct_init"}}}
+{"bricks":{"application":{"path":"./application_layer"},"domain":{"path":"./domain_layer"},"presentation":{"path":"./presentation_layer"},"infra":{"path":"./infrastructure_layer"},"starter":{"path":"./struct_init"},"feature_package":{"path":"./feature_package"}}}
