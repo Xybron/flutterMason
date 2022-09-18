@@ -13,4 +13,5 @@ vars:
   name:
     type: string
     description: Feature name
-    prompt: Feature name?
+    prompt: What feature do you want to create?
+    default: DDD_Feature
