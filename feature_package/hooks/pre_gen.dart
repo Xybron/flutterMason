@@ -42,7 +42,7 @@ void run(HookContext context) async {
           .success("${context.vars['name']} ${brick.name} layer generated.");
     });
 
-// TODO!: Must impelement this like a promise 🤔
+// TODO!: Must impelement this like a promise
     context.logger
         .success("${context.vars['name']} feature successfully generated.");
   } catch (e) {
