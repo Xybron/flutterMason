@@ -1,4 +1,4 @@
-name: feature_package
+name: ddd_feature
 description: Generates a feature which makes up the application, domain, presentation and infrastructure layers.
 
 # The following defines the version and build number for your brick.

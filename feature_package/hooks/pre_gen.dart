@@ -1,8 +1,14 @@
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:mason/mason.dart';
 
 void run(HookContext context) async {
+  // Get the output directory from the command-line arguments
+  var outputDirectoryPath = './home'; // Default to './home' if not provided
+
+  var targetDirectory = Directory(outputDirectoryPath);
+
   // List of needed bricks
   List<Brick> bricks = [
     Brick(
@@ -27,22 +33,22 @@ void run(HookContext context) async {
   ];
 
   try {
-// Generate the various layer bricks
+    // Generate the various layer bricks
     bricks.forEach((brick) async {
-// Init a brick generator
+      // Init a brick generator
       var generator = await MasonGenerator.fromBrick(
         brick,
       );
 
-      // Generate a brick to the current path
-      await generator.generate(DirectoryGeneratorTarget(Directory.current),
+      // Generate a brick to the specified target directory
+      await generator.generate(DirectoryGeneratorTarget(targetDirectory),
           vars: context.vars, logger: context.logger);
 
-      context.logger
-          .success("${context.vars['name']} ${brick.name} layer generated.");
+      context.logger.success(
+          "${context.vars['name']} ${brick.name} layer generated in ${targetDirectory.path}.");
     });
 
-// TODO!: Must impelement this like a promise
+    // TODO!: Must implement this like a promise
     context.logger
         .success("${context.vars['name']} feature successfully generated.");
   } catch (e) {
