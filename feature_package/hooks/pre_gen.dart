@@ -1,13 +1,9 @@
 import 'dart:io';
 
-import 'package:args/args.dart';
 import 'package:mason/mason.dart';
 
-void run(HookContext context) async {
-  // Get the output directory from the command-line arguments
-  var outputDirectoryPath = './home'; // Default to './home' if not provided
-
-  var targetDirectory = Directory(outputDirectoryPath);
+void run(HookContext context, {List<String>? arguments}) async {
+  var targetDirectory = Directory("./lib");
 
   // List of needed bricks
   List<Brick> bricks = [
@@ -49,8 +45,7 @@ void run(HookContext context) async {
     });
 
     // TODO!: Must implement this like a promise
-    context.logger
-        .success("${context.vars['name']} feature successfully generated.");
+    context.logger.success("${context.vars['name']} feature completed.");
   } catch (e) {
     context.logger.err(e.toString());
   }
