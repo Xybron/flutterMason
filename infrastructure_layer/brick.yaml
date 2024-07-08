@@ -15,4 +15,4 @@ vars:
   name:
     type: string
     description: Layer name
-    prompt: Application layer name
+    prompt: Infrastucture layer name
