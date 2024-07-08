@@ -3,9 +3,9 @@
   "packages": [
     {
       "name": "archive",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/archive-3.4.6",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/archive-3.6.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "async",
@@ -21,9 +21,9 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/collection-1.18.0",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/collection-1.19.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.4"
     },
     {
       "name": "convert",
@@ -39,49 +39,49 @@
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/ffi-2.1.0",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/ffi-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/http-1.1.0",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/http_parser-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "io",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/io-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "js",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/js-0.6.7",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
       "name": "json_annotation",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/json_annotation-4.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.0"
     },
     {
       "name": "mason",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/mason-0.1.0-dev.51",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/mason-0.1.0-dev.57",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.3"
     },
     {
       "name": "mason_logger",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/mason_logger-0.2.10",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/mason_logger-0.2.15",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.3"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/meta-1.11.0",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/meta-1.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -93,15 +93,9 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/path-1.8.3",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "pointycastle",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/pointycastle-3.7.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "pool",
@@ -146,10 +140,16 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "win32",
-      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/win32-5.0.9",
+      "name": "web",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/web-0.5.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "win32",
+      "rootUri": "file:///Users/xybron/.pub-cache/hosted/pub.dev/win32-5.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "yaml",
@@ -164,7 +164,10 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-10-20T18:12:13.166372Z",
+  "generated": "2024-07-08T16:23:32.771906Z",
   "generator": "pub",
-  "generatorVersion": "3.1.0"
+  "generatorVersion": "3.4.3",
+  "flutterRoot": "file:///Users/xybron/flutter",
+  "flutterVersion": "3.22.2",
+  "pubCache": "file:///Users/xybron/.pub-cache"
 }
