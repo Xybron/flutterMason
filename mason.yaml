@@ -9,5 +9,5 @@ bricks:
     path: ./infrastructure_layer
   starter:
     path: ./struct_init
-  ddd_feature:
+  feature:
     path: ./feature_package
