@@ -3,28 +3,25 @@ import 'dart:io';
 import 'package:mason/mason.dart';
 
 void run(HookContext context, {List<String>? arguments}) async {
-  var targetDirectory = Directory("./lib/feature");
+  final targetDirectory = Directory("./lib/feature");
+  final path = ".";
 
   // List of needed bricks
   List<Brick> bricks = [
     Brick(
-        location: BrickLocation(
-            path: "${Directory.current.path}/application_layer",
-            version: "0.1.0"),
+        location:
+            BrickLocation(path: "$path/application_layer", version: "0.1.0"),
         name: "application"),
     Brick(
-        location: BrickLocation(
-            path: "${Directory.current.path}/domain_layer", version: "0.1.0"),
+        location: BrickLocation(path: "$path/domain_layer", version: "0.1.0"),
         name: "domain"),
     Brick(
-        location: BrickLocation(
-            path: "${Directory.current.path}/presentation_layer",
-            version: "0.1.0"),
+        location:
+            BrickLocation(path: "$path/presentation_layer", version: "0.1.0"),
         name: "presentation"),
     Brick(
-        location: BrickLocation(
-            path: "${Directory.current.path}/infrastructure_layer",
-            version: "0.1.0"),
+        location:
+            BrickLocation(path: "$path/infrastructure_layer", version: "0.1.0"),
         name: "infra"),
   ];
 

@@ -1,13 +1,1 @@
 bricks:
-  application:
-    path: ./application_layer
-  domain:
-    path: ./domain_layer
-  presentation:
-    path: ./presentation_layer
-  infra:
-    path: ./infrastructure_layer
-  starter:
-    path: ./struct_init
-  feature:
-    path: ./feature_package
