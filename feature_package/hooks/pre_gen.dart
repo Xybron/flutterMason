@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:mason/mason.dart';
 
 void run(HookContext context, {List<String>? arguments}) async {
-  var targetDirectory = Directory("./lib");
+  var targetDirectory = Directory("./lib/feature");
 
   // List of needed bricks
   List<Brick> bricks = [
@@ -42,6 +42,16 @@ void run(HookContext context, {List<String>? arguments}) async {
 
       context.logger.success(
           "${context.vars['name']} ${brick.name} layer generated in ${targetDirectory.path}.");
+
+      // Run the build_runner command
+      var result =
+          await Process.run('dart', ['pub', 'run', 'build_runner', 'build']);
+
+      if (result.exitCode == 0) {
+        context.logger.success('build_runner build completed successfully.');
+      } else {
+        context.logger.err('build_runner build failed:\n${result.stderr}');
+      }
     });
 
     // TODO!: Must implement this like a promise
