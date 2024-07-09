@@ -4,54 +4,74 @@ import 'package:mason/mason.dart';
 
 void run(HookContext context, {List<String>? arguments}) async {
   final targetDirectory = Directory("./lib/feature");
-  final path = ".";
 
   // List of needed bricks
   List<Brick> bricks = [
     Brick(
-        location:
-            BrickLocation(path: "$path/application_layer", version: "0.1.0"),
-        name: "application"),
+      location: BrickLocation(
+        git: GitPath(
+          'https://github.com/Xybron/flutterMason.git',
+          path: 'application_layer',
+        ),
+      ),
+      name: 'application',
+    ),
     Brick(
-        location: BrickLocation(path: "$path/domain_layer", version: "0.1.0"),
-        name: "domain"),
+      location: BrickLocation(
+        git: GitPath(
+          'https://github.com/Xybron/flutterMason.git',
+          path: 'domain_layer',
+        ),
+      ),
+      name: 'domain',
+    ),
     Brick(
-        location:
-            BrickLocation(path: "$path/presentation_layer", version: "0.1.0"),
-        name: "presentation"),
+      location: BrickLocation(
+        git: GitPath(
+          'https://github.com/Xybron/flutterMason.git',
+          path: 'presentation_layer',
+        ),
+      ),
+      name: 'presentation',
+    ),
     Brick(
-        location:
-            BrickLocation(path: "$path/infrastructure_layer", version: "0.1.0"),
-        name: "infra"),
+      location: BrickLocation(
+        git: GitPath(
+          'https://github.com/Xybron/flutterMason.git',
+          path: 'infrastructure_layer',
+        ),
+      ),
+      name: 'infra',
+    ),
   ];
 
   try {
     // Generate the various layer bricks
-    bricks.forEach((brick) async {
+    for (var brick in bricks) {
       // Init a brick generator
-      var generator = await MasonGenerator.fromBrick(
-        brick,
-      );
+      var generator = await MasonGenerator.fromBrick(brick);
 
       // Generate a brick to the specified target directory
-      await generator.generate(DirectoryGeneratorTarget(targetDirectory),
-          vars: context.vars, logger: context.logger);
+      await generator.generate(
+        DirectoryGeneratorTarget(targetDirectory),
+        vars: context.vars,
+        logger: context.logger,
+      );
 
       context.logger.success(
           "${context.vars['name']} ${brick.name} layer generated in ${targetDirectory.path}.");
+    }
 
-      // Run the build_runner command
-      var result =
-          await Process.run('dart', ['pub', 'run', 'build_runner', 'build']);
+    // Run the build_runner command after all bricks are generated
+    var result =
+        await Process.run('dart', ['pub', 'run', 'build_runner', 'build']);
 
-      if (result.exitCode == 0) {
-        context.logger.success('build_runner build completed successfully.');
-      } else {
-        context.logger.err('build_runner build failed:\n${result.stderr}');
-      }
-    });
+    if (result.exitCode == 0) {
+      context.logger.success('build_runner build completed successfully.');
+    } else {
+      context.logger.err('build_runner build failed:\n${result.stderr}');
+    }
 
-    // TODO!: Must implement this like a promise
     context.logger.success("${context.vars['name']} feature completed.");
   } catch (e) {
     context.logger.err(e.toString());
