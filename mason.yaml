@@ -1,1 +1,3 @@
 bricks:
+  feature:
+    path: feature_layer
